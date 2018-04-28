@@ -11,3 +11,6 @@ Initially, we split the supplied string using the regex ','. Now, what we have i
 We traverse the array of strings, one string at a time and create a tree node, insert it into the level order queue, and proceed with the next string.
 In case, a 'n' (signifying null) is encountered, we can directly proceed to the next string without inserting any node in the queue, and adding null as a child of current node.
 The loop continues until, string length is depleted and the queue is empty.
+
+OUTPUT
+In the current example run, a simple Binary Tree has been hardcode. The tree is them supplied to the serialize function and the resultant string is obtained. The string is then supplied to desrialize method, which in turn return a tree. This tree is sent to serialize method again, in order to verify that the string generated this time is same as the one originally generated. This will verify the validity of both serialize and desrialize methods.
