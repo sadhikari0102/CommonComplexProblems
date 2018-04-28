@@ -1,0 +1,13 @@
+SERIALIZATION
+Using a level order traversal technique in Binary Tree, each node is traversed and added to the resultant string.
+A Queue is maintained for the upcoming nodes in the tree, and to maintain the correct order of the nodes (level order-all parents before the children)
+Each time a node is iterated over in the tree, it's children are inserted into the rare end of the queue.
+Alongside, the node is also inserted into the resultant string. All nodes are separated by a ',' in the string.
+If any or both of the node child(ren) is/are null, a letter 'n' is inserted into the string to signify the presence of null node, to help in deserializing.
+
+DESERIALIZING
+Since the string has been created in level order, the accurate way to proceed with the de-serialization would be to follow level order as well.
+Initially, we split the supplied string using the regex ','. Now, what we have is a string array, where one string represents one node.
+We traverse the array of strings, one string at a time and create a tree node, insert it into the level order queue, and proceed with the next string.
+In case, a 'n' (signifying null) is encountered, we can directly proceed to the next string without inserting any node in the queue, and adding null as a child of current node.
+The loop continues until, string length is depleted and the queue is empty.
