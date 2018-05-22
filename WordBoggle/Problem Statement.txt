@@ -1,0 +1,14 @@
+Given a dictionary, a method to do lookup in dictionary and a M x N board where every cell has one character. Find all possible words that can be formed by a sequence of adjacent characters. Note that we can move to any of 8 adjacent characters, but a word should not have multiple instances of same cell.
+
+Example:
+
+Input: dictionary[] = {"CODE", "SOLO", "RULES", "COOL"};
+       boggle[][]   = {{'R', 'L', 'D'},
+                	{'U', 'O', 'E'},
+                	{'C', 'S', 'O'}};;
+      isWord(str): returns true if str is present in dictionary
+                   else false.
+
+Output:  Following words of dictionary are present
+         CODE
+	RULES

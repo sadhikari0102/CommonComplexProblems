@@ -1,0 +1,11 @@
+void makeMap(char[][] board) (Making the map)
+Program the grid provided in form of a HashMap<Character, Set<Integer>>, which represents position of a character in the grid(one or multiple times, hence the set). Position is represented by a unique integer for each cell (mapped as 0,0 - 0; 0,1 - 1; 0,2 - 2 ... and so on). This will later be useful to find, in constant time, whether or not, adjacent neighbours contain the character needed to make the input strings.
+
+String[] wordBoggle(char[][] board, String[] words) (Main function)
+This is the main function called from the object of the class, passed with the input grid and words to find in it. It triggers function checkPresence() for each input word, which in turn returns a boolean concluding the presence of the word.
+
+boolean checkPresence(String word) (Find the starting letter in the grid)
+This function takes input word as an argument and finds a first characted in the grid, to act as a starting point for recursive search of subsequent characters. Since there can be multiple presence of same character in the grid, a loop is necessary to run the recursion for each presence.
+
+boolean recurse(String word, Set<Integer> visited, int code) (Recursive fuction to search the whole word)
+This function is called recursively each time with the subsequent character in the input string. Every time, the neighbours of the current character position are found in the grid and compared with the next string character, if there is match, the functino is called recursively with the next character, else the search is terminated for that iteration.
